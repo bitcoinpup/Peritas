@@ -34,7 +34,7 @@ Peritas provides users with a simple, guided process for creating a secure multi
 
 ### 2.4 Vault Creation and Management
 
-- With the user’s, trusted contact’s, and third-party public keys in place, Peritas creates a multi-signature vault and shares descriptor files securely with the trusted contact and the exchange.
+- With the user’s "Alice", trusted contact’s "Bob", and third-party public keys "Charlie" in place, Peritas creates a multi-signature vault and shares descriptor files securely with the trusted contact and the exchange.
 - The app houses configuration files for each multi-sig wallet and enforces security by **rejecting any attempt to add additional keys from the same multi-sig setup**, ensuring that a quorum of keys cannot be consolidated on a single device.
 
 ### 2.5 Encrypted Cloud Backup
