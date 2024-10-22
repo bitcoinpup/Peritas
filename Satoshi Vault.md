@@ -22,7 +22,7 @@ Satoshi Vault provides users with a simple, guided process for creating a secure
 
 - Users begin by selecting the option to create a new "vault" (multi-signature wallet). The default configuration is a 2/3 multi-sig setup, although users can access advanced settings to adjust the number of signatories and the threshold required for authorizing transactions.
 - The application generates a new Bitcoin key, securely encrypting it on the user’s device as a software key.
-- It is important to tailor multi-sig setups to the user’s situation, skill level, and the size of their holdings. For smaller amounts (e.g., 100,000 sats), a **2/3 service-based multi-sig** involving keys held on the user’s phone, a spouse’s device, and the exchange where one purchases Bitcoin may be appropriate, providing a balance of convenience and security. For larger holdings, users may opt for a more secure configuration with a higher number of signatories and a higher threshold for transaction authorization to enhance protection and mitigate risks.
+- It is important to tailor multi-sig setups to the user’s situation, skill level, and the size of their holdings. For smaller amounts (e.g., 100,000 sats), a **2/3 service-based multi-sig** involving keys held on the user’s phone, a spouse’s device or trusted contact's device, and the exchange where one purchases Bitcoin, or a third-party key holder may be appropriate, providing a balance of convenience and security. For larger holdings, users may opt for a more secure configuration with a higher number of signatories and a higher threshold for transaction authorization to enhance protection and mitigate risks.
 
 ### 2.2 Integration with Trusted Contacts
 
