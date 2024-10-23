@@ -1,4 +1,4 @@
-# Peritas White Paper
+# Peritas
 
 ## Overview
 
