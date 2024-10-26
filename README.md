@@ -27,6 +27,7 @@ The [white paper](https://github.com/bitcoinpup/Peritas/blob/main/Peritas%20Whit
 7. **Market Considerations and Demand**: Discussion on Peritas’s role in addressing the needs of new Bitcoin users.
 8. **Conclusion**: Emphasizing Peritas’s importance in advancing Bitcoin self-custody security and accessibility.
 9. **Contributors and Acknowledgements**: Recognition of key contributors and influential figures in the development of Peritas.
+10. **Additional Resources**: Links to other files related to Peritas.
 
 ## How to Use The White Paper
 
