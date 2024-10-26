@@ -113,3 +113,8 @@ Peritas was developed with insights and support from several key contributors in
 - **Guy Swann**, founder of Bitcoin Audible, provided valuable perspectives on multi-signature setups and emphasized the importance of using multi-sig as the standard for Bitcoin self-custody and recovery processes.
 - We also acknowledge the efforts of the many **builders and developers** who have worked tirelessly to bring Bitcoin self-custody to its present stage, creating the tools and upholding the principles that Peritas hopes to further.
 - Additional input and feedback were provided by members of the Bitcoin community who share a commitment to enhancing security and accessibility for Bitcoin newcomers.
+
+## **10. Additional Resources**
+
+- See a breakdown of some of the terms used above in [Glossary of Terms.md](https://github.com/bitcoinpup/Peritas/blob/main/Glossary%20of%20Terms.md).
+
