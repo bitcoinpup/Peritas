@@ -1,8 +1,8 @@
-# **Peritas: An Accessible Multi-Signature Wallet Solution for Enhanced Self-Custody**
+# **Peritas: An Accessible Multi-Signature Wallet Proposal for Enhanced Self-Custody**
 
 ## **Abstract**
 
-Peritas aims to provide a simple, open-source, multi-platform application designed to simplify the setup and management of multi-signature (multi-sig) wallets. The application specifically targets new Bitcoin users, enhancing the security of their holdings without requiring additional hardware. By creating an accessible, intuitive interface and aligning with Web of Trust (WOT) principles, Peritas addresses a significant gap in the Bitcoin ecosystem, promoting higher security with minimal user friction.
+Peritas aims to provide or inspire simple, open-source, multi-platform applications designed to simplify the setup and management of multi-signature (multi-sig) wallets. It specifically targets new Bitcoin users, enhancing the security of their holdings without requiring additional hardware. By creating an accessible, intuitive interface and aligning with Web of Trust (WOT) principles, Peritas hopes to address a significant gap in the Bitcoin ecosystem, promoting higher security with minimal user friction.
 
 ## **1. Introduction**
 
@@ -10,7 +10,7 @@ Bitcoin wallets typically take one of two forms: single-signature (single-sig) a
 
 Multi-sig wallets require multiple keys to authorize transactions, significantly enhancing security by distributing custody across multiple signatories. Multi-sig should be the standard for all Bitcoin self-custody setups, particularly for key recovery and backup processes, as an improvement over traditional paper seed backups.
 
-This white paper proposes Peritas: an open-source, multi-platform application that simplifies multi-sig wallet creation and operation, making enhanced security accessible to all Bitcoin users without the need for dedicated hardware.
+This white paper introduces Peritas: an open-source, multi-platform application proposal that simplifies multi-sig wallet creation and operation, making enhanced security accessible to all Bitcoin users without the need for dedicated hardware.
 
 ## **2. System Overview**
 
@@ -32,13 +32,13 @@ Peritas provides users with a simple, guided process for creating a secure multi
 
 ### 2.3 Third-Party Collaborative Custody
 
-- Third-Party Integration and Support: Peritas envisions integration of its vault creation process with vetted exchanges or respected Bitcoin support and mentorship services. These Third-Party Keyholders providers can offer higher levels of technical support and guidance to Founders, though such support may come at the expense of privacy.
-- Flexibility: Peritas provides a flexible setup for multi-sig vaults. Founders may choose to forgo third-party key involvement entirely, opting instead to include additional Keyholders, as referenced in 2.2, for a more private configuration.
+- Third-Party Integration and Support: Peritas envisions integration of its vault creation process with vetted exchanges or respected Bitcoin support and mentorship services. These Third-Party Keyholders can offer higher levels of technical support and guidance to Founders, though such support may come at the expense of privacy.
+- Flexibility: Peritas provides a flexible setup for multi-sig vaults. Founders may choose to forgo this institutional third-party key involvement entirely, opting instead to include additional trusted contact Keyholders, as referenced in 2.2, for a more private configuration.
 
 ### 2.4 Vault Creation and Management
 
-- With the Founder’s "Alice", Keyholder's "Bob", and any Third-Party Keyholder's "Charlie" public keys in place, Peritas creates a multi-signature vault and shares descriptor files securely with all participating parties.
-- The app houses configuration files for each multi-sig vault and enforces security by **rejecting any attempt to add additional keys from the same multi-sig setup**, ensuring that a quorum of keys cannot be consolidated on a single device.
+- With the Founder’s, Keyholder's, and any Third-Party Keyholder's public keys in place, Peritas creates a multi-signature vault and shares descriptor files securely with all participating parties.
+- The app houses configuration files for each multi-sig vault and enforces security by **rejecting any attempt to add additional keys from the same vault**, ensuring that a quorum of keys cannot be consolidated on a single device.
 
 ### 2.5 Encrypted Cloud Backup
 
@@ -50,16 +50,16 @@ Peritas provides users with a simple, guided process for creating a secure multi
 
 - **Encryption**: All communication between the app, users, trusted contacts, and exchanges is encrypted using AES-256 and other state-of-the-art encryption protocols to ensure privacy and prevent interception or tampering.
 - **Cross-Platform Support**: Peritas is designed to function across multiple platforms (iOS, Android, Windows, Linux) to ensure broad accessibility.
-- **Public Key Transmission**: Secure communication protocols such as Fedi, Matrix, Nostr Gift-Wrapped Messages, or Pears integration may be used to transmit public keys, descriptor files, and signatures, safeguarding user information.
+- **Data Transmission**: Secure communication protocols such as Fedi, Matrix, Nostr Gift-Wrapped Messages, or Pears integration may be used to transmit public keys, descriptor files, and signatures, safeguarding user information.
 
 ### 3.2 User Experience Design
 
-- **Onboarding and Education**: A setup wizard guides users through wallet creation, using simple language and visual aids to explain multi-sig benefits, vault concepts, and the roles of trusted contacts and exchanges.
-- **Customization**: Users can access an advanced “Pro Mode” for configuring signatories beyond the default 2/3 setup, allowing for custom thresholds and advanced wallet configurations.
+- **Onboarding and Education**: A setup wizard guides users through vault creation, using simple language and visual aids to explain multi-sig benefits, vault concepts, and the roles of different types of Keyholders.
+- **Pathfinder Mode**: Users can access an advanced "Pathfinder Mode" to configure vaults with a higher number of signatories than the default 2-of-3 vault, unlocking options for custom thresholds, personalized wallet configurations, and unique security protocols. Future expansions under Pathfinder Mode may include enhanced signing automation, integration with additional security services, and greater control over key storage and recovery preferences, enabling users to tailor their vault setup to their evolving security needs.
 
 ### 3.3 Node Connectivity
 
-To maintain decentralization and minimize the risk associated with a single point of failure, Peritas will not rely on a central node for its operations. Instead, the application will offer multiple options for users:
+To maintain decentralization and minimize the risk associated with a single point of failure, Peritas will not rely on a central node for its operations. Instead, offering multiple options for users:
 
 - **Custom Node Connections**: Users can connect Peritas to their own Bitcoin nodes, providing maximum control and security. This approach aligns with the Bitcoin ethos of self-sovereignty and reduces reliance on third-party infrastructure.
 - **Public Node Selection**: For users without their own nodes, the application will provide a selection of vetted, community-operated public nodes to connect with. This offers convenience while distributing trust across multiple independent entities, minimizing the risk of centralization.
@@ -79,7 +79,7 @@ Peritas prioritizes security and privacy:
 
 ### 5.1 Wallet Providers
 
-- Peritas could partner with existing open-source wallet providers, such as Nunchuk, to integrate its multi-sig functionality and expand their security offerings.
+- Peritas could partner with existing and up-coming open-source wallet providers, to integrate its vault functionality proposals and expand their security offerings.
 
 ### 5.2 Exchange Collaboration
 
@@ -93,10 +93,13 @@ Peritas prioritizes security and privacy:
 - **Automatic Backup Options**: Users will have more automated and secure options for backing up their encrypted keys, including automated cloud backups and integration with secure storage solutions.
 - **Transaction Monitoring**: The app will incorporate transaction monitoring services, enabling users to receive alerts and detailed information about incoming and outgoing transactions.
 - **Guided Key Rotation/Replacement**: To maintain long-term security and minimize risks from potential key compromises, Peritas will offer a guided process for rotating or replacing keys within a multi-sig setup. The feature will provide users with step-by-step instructions on how to update their vault’s keys, ensuring a secure and seamless transition without risking access to funds.
+- Timelocks: Pathfinder Mode allows users to set custom timelocks for certain transactions, offering additional control over when funds can be moved, which is particularly useful in setting up delayed recovery mechanisms or ensuring funds are secure for specific timeframes.
+- Miniscript Support: Integrate Miniscript functionality for a more expressive and programmable approach to transaction conditions, empowering users to set complex logic for transaction approvals and build custom spending policies tailored to their needs.
+- Future-Proofing with CTV: In the event of future consensus around [CheckTemplateVerify](https://bitcoinops.org/en/topics/op_checktemplateverify/) (CTV) (BIP-119), Pathfinder Mode will likely be updated to support CTV-specific outputs, offering options for conditional spending paths and more efficient use of UTXOs. This will enable enhanced, adaptable control over transaction flows, making Peritas wallets more resilient and versatile as Bitcoin development progresses.
 
 ### 6.2 Premium Services
 
-- Potential premium services advanced support for users configuring complex multi-sig setups. These services may be facilitated through strategic partnerships with community-vetted organizations such as **Bitcoin Mentor** or **The Bitcoin Way**, ensuring trusted and expert guidance for users.
+- Potential premium services include advanced support for users configuring complex vaults. These services may be facilitated through strategic partnerships with community-vetted organizations such as **Bitcoin Mentor** or **The Bitcoin Way**, ensuring trusted and expert guidance for users.
 
 ## **7. Market Considerations and Demand**
 
@@ -104,11 +107,11 @@ While specialized hardware signing devices will continue to cater to those with 
 
 ## **8. Conclusion**
 
-Peritas is a critical step forward in improving Bitcoin self-custody security. By offering an open-source, user-friendly application for multi-signature wallet setup and management, Peritas empowers users to protect their holdings without the need for additional hardware. Every self-custody setup should incorporate multi-sig, and Peritas provides an adaptable, secure solution to meet this need, ensuring that new users have access to robust security models that align with the ethos of Bitcoin’s financial sovereignty. **By paving a path to accessible and secure Bitcoin self-custody for the coming waves of new Bitcoin participants, Peritas aims to uphold and strengthen the principles of financial freedom and autonomy in the Bitcoin ecosystem.**
+Peritas is a critical step forward in improving Bitcoin self-custody security. By proposing an open-source framework for user-friendly vault creation and management applications, Peritas is working to empower users to protect their holdings without the need for additional hardware. Every self-custody setup should incorporate multi-sig, and Peritas provides an adoptable framework for secure solutions that meet this need, ensuring that new users will have access to robust security models that align with the ethos of Bitcoin’s financial sovereignty. **By paving a path to accessible and secure Bitcoin self-custody for the coming waves of new Bitcoin participants, Peritas aims to uphold and strengthen the principles of financial freedom and autonomy in the Bitcoin ecosystem.**
 
 ## **9. Contributors and Acknowledgements**
 
-Peritas was developed with insights and support from several key contributors in the Bitcoin community:
+Peritas was developed with insights and support from many contributors in the Bitcoin community:
 
 - **Guy Swann**, founder of Bitcoin Audible, provided valuable perspectives on multi-signature setups and emphasized the importance of using multi-sig as the standard for Bitcoin self-custody and recovery processes.
 - We also acknowledge the efforts of the many **builders and developers** who have worked tirelessly to bring Bitcoin self-custody to its present stage, creating the tools and upholding the principles that Peritas hopes to further.
