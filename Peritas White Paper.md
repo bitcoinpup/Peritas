@@ -18,29 +18,31 @@ This white paper proposes Peritas: an open-source, multi-platform application th
 
 Peritas provides users with a simple, guided process for creating a secure multi-sig wallet:
 
-- Users begin by selecting the option to create a new "vault" (multi-signature wallet). The default configuration is a 2/3 multi-sig setup, although users can access advanced settings to adjust the number of signatories and the threshold required for authorizing transactions.
-- The application generates a new Bitcoin key, securely encrypting it on the user’s device as a software key.
-- It is important to tailor multi-sig setups to the user’s situation, skill level, and the size of their holdings. For smaller amounts (e.g., 100,000 sats), a **2/3 service-based multi-sig** involving keys held on the user’s phone, a spouse’s or trusted contact's device, and the exchange where one purchases Bitcoin or a vetted third-party key holder may be appropriate, providing a balance of convenience and security. For larger holdings, users may opt for a more secure configuration with a higher number of signatories and a higher threshold for transaction authorization to enhance protection and mitigate risks.
+- **Initial Keypair Generation:** Upon initial app startup, Peritas automatically generates a base Bitcoin keypair (Base Key) for the user. This Base Key will be foundational for creating recovery and multi-sig configurations.
+- **Vault Founders** (Founders) begin by opting to create a new "vault" (multi-signature wallet). The default configuration is a 2/3 multi-sig setup, although Founders can access advanced settings to adjust the number of signatories and the threshold required for authorizing transactions.
+- The application will derive a new private key (Vault Key) from the Base Key for use in the new multi-sig vault. Vault Keys may be derived from the Base Key using BIP-85 child seeds, alternate accounts or derivation paths, or the use of passphrases (exact method TBD). All data required for regeneration of Vault Keys is securely stored in encrypted app data.
+- It is important to tailor multi-sig setups to the Founder’s situation, skill level, and the size of their holdings. For smaller amounts (e.g., 100,000 sats), a **2/3 service-based multi-sig** involving keys held on the Founder’s phone, a spouse’s or trusted contact's device, a participating exchange where the Founder purchases Bitcoin, or a vetted third-party key holder may be appropriate, providing a balance of convenience and security. For larger holdings, Founders may opt for a more secure configuration with a higher number of signatories and a higher threshold for transaction authorization to enhance fault-tolerance and mitigate risks.
 
-### 2.2 Integration with Trusted Contacts
+### 2.2 Integration with Trusted Contacts (Keyholders)
 
-- Users are prompted to select a trusted contact who can generate a "Social Recovery Key." The public key from this newly generated keypair, created through a simple option on the app’s welcome page, is shared back with the user for use in the configuration of their multi-sig vault.
-- An "affiliate + key assistance" system may also be used, where the additional key could be managed by the person who onboarded the user (e.g., a mentor or trusted friend), reinforcing usability and trust.
+- Founders are prompted to select a Keyholder, a trusted contact who will generate a Social Recovery Key. 
+- Following initial app startup, Keyholders will select an option to "Become a Keyholder". This selection prompts Peritas to generate a Social Recovery Key using a process identical to the creation of Vault Keys (outlined in 2.1).
+- The public key from this newly generated Social Recovery Key, (created through a simple option on the app’s welcome page), is shared back to the Vault Founder for use in the configuration of their multi-sig vault.
+- An "affiliate + key assistance" system could also be used, where a Social Recovery Key could be managed by the person who onboarded the user (e.g., a mentor), who, assuming a trusted relationship between parties, could assist the Founder through the vault creation and management process as needed.
 
 ### 2.3 Third-Party Collaborative Custody
 
-- Peritas offers flexibility for the third key in the multi-sig setup. While users can choose to partner with an exchange, they may also select a vetted partner of their choice. Peritas will build partnerships with respected Bitcoin support and mentorship services that offer third-party key custody as a service. These vetted partners may charge a fee for advanced support or assistance if required.
-- Alternatively, if the user prefers, they can choose another trusted contact to create a second Social Recovery Key, allowing for a more private Vault configuration.
+- Third-Party Integration and Support: Peritas envisions integration of its vault creation process with vetted exchanges or respected Bitcoin support and mentorship services. These Third-Party Keyholders providers can offer higher levels of technical support and guidance to Founders, though such support may come at the expense of privacy.
+- Flexibility: Peritas provides a flexible setup for multi-sig vaults. Founders may choose to forgo third-party key involvement entirely, opting instead to include additional Keyholders, as referenced in 2.2, for a more private configuration.
 
 ### 2.4 Vault Creation and Management
 
-- With the user’s "Alice", trusted contact’s "Bob", and third-party public keys "Charlie" in place, Peritas creates a multi-signature vault and shares descriptor files securely with the trusted contact and the exchange.
-- The app houses configuration files for each multi-sig wallet and enforces security by **rejecting any attempt to add additional keys from the same multi-sig setup**, ensuring that a quorum of keys cannot be consolidated on a single device.
+- With the Founder’s "Alice", Keyholder's "Bob", and any Third-Party Keyholder's "Charlie" public keys in place, Peritas creates a multi-signature vault and shares descriptor files securely with all participating parties.
+- The app houses configuration files for each multi-sig vault and enforces security by **rejecting any attempt to add additional keys from the same multi-sig setup**, ensuring that a quorum of keys cannot be consolidated on a single device.
 
 ### 2.5 Encrypted Cloud Backup
 
-- To enhance redundancy, Peritas offers users the option to encrypt and store their key material in their preferred cloud service (e.g., iCloud, Google Drive). This approach leverages familiar systems providing a seamless way for users to store recovery keys.
-- This minimizes the risk of loss of key material in the event of device loss or app data deletion.
+- To enhance redundancy, Peritas offers users the option to encrypt and store their keys and vault configuration files with their preferred cloud service (e.g., iCloud, Google Drive). This approach leverages familiar systems providing a seamless way for users to store recovery keys, minimizing the risk of loss of key material in the event of device loss or app data deletion.
 
 ## **3. Technical Implementation**
 
@@ -48,7 +50,7 @@ Peritas provides users with a simple, guided process for creating a secure multi
 
 - **Encryption**: All communication between the app, users, trusted contacts, and exchanges is encrypted using AES-256 and other state-of-the-art encryption protocols to ensure privacy and prevent interception or tampering.
 - **Cross-Platform Support**: Peritas is designed to function across multiple platforms (iOS, Android, Windows, Linux) to ensure broad accessibility.
-- **Public Key Transmission**: Secure communication protocols such as Fedi, Matrix, or Nostr Gift-Wrapped Messages may be used to transmit public keys, descriptor files, and signatures, safeguarding user information.
+- **Public Key Transmission**: Secure communication protocols such as Fedi, Matrix, Nostr Gift-Wrapped Messages, or Pears integration may be used to transmit public keys, descriptor files, and signatures, safeguarding user information.
 
 ### 3.2 User Experience Design
 
@@ -63,6 +65,7 @@ To maintain decentralization and minimize the risk associated with a single poin
 - **Public Node Selection**: For users without their own nodes, the application will provide a selection of vetted, community-operated public nodes to connect with. This offers convenience while distributing trust across multiple independent entities, minimizing the risk of centralization.
 - **Tor Integration**: To enhance privacy, Peritas will support Tor integration, enabling users to connect to nodes anonymously and reducing the risk of tracking and monitoring.
 - **Automatic Node Load Balancing**: The app may implement a feature that automatically rotates between multiple trusted public nodes, ensuring that no single node becomes a point of dependency.
+- You can view additional connectivity ideas we're thinking through in our file [Decentralized Checkpointing.md](https://github.com/bitcoinpup/Peritas/blob/main/Decentralized%20Checkpointing.md).
 
 ## **4. Security and Privacy Considerations**
 
