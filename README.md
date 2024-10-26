@@ -6,7 +6,7 @@ Peritas is an open-source, multi-platform application designed to simplify the s
 
 ## White Paper Purpose
 
-This white paper outlines the technical and strategic vision for Peritas, providing a comprehensive explanation of:
+The [white paper](https://github.com/bitcoinpup/Peritas/blob/main/Peritas%20White%20Paper.md) outlines the technical and strategic vision for Peritas, providing a comprehensive explanation of:
 
 - The need for improved self-custody solutions in the Bitcoin ecosystem.
 - The use of multi-signature setups to increase security for Bitcoin users.
@@ -16,7 +16,7 @@ This white paper outlines the technical and strategic vision for Peritas, provid
 
 ## Contents
 
-The white paper covers the following sections:
+The [white paper](https://github.com/bitcoinpup/Peritas/blob/main/Peritas%20White%20Paper.md) covers the following sections:
 
 1. **Abstract**: A brief summary of Peritas’s purpose and mission.
 2. **Introduction**: Explanation of Bitcoin wallets, multi-signature setups, and the need for a solution like Peritas.
@@ -28,9 +28,9 @@ The white paper covers the following sections:
 8. **Conclusion**: Emphasizing Peritas’s importance in advancing Bitcoin self-custody security and accessibility.
 9. **Contributors and Acknowledgements**: Recognition of key contributors and influential figures in the development of Peritas.
 
-## How to Use This White Paper
+## How to Use The White Paper
 
-This document is intended for developers, Bitcoin enthusiasts, potential partners, and any individuals or organizations interested in improving Bitcoin self-custody solutions. It provides a roadmap for Peritas’s development, highlighting technical specifications, strategic goals, and partnership opportunities.
+The [white paper](https://github.com/bitcoinpup/Peritas/blob/main/Peritas%20White%20Paper.md) is intended for developers, Bitcoin enthusiasts, potential partners, and any individuals or organizations interested in improving Bitcoin self-custody solutions. It provides a roadmap for Peritas’s development, highlighting technical specifications, strategic goals, and partnership opportunities.
 
 To dive into the details:
 
